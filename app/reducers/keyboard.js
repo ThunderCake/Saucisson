@@ -1,7 +1,5 @@
 const PREFIX = 'KEYBOARD'
 
-import { KEYCODE_ARROW_LEFT, KEYCODE_ARROW_RIGHT } from 'utils/';
-
 const EVENT = `${PREFIX}/EVENT`
 export const keyboardEvent = id => (dispatch, getState) => {
   dispatch({ type: EVENT, payload: parseInt(id) })

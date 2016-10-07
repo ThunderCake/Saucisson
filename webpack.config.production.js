@@ -2,11 +2,11 @@
  * Build config for electron 'Renderer Process' file
  */
 
-import webpack from 'webpack';
-import validate from 'webpack-validator';
-import ExtractTextPlugin from 'extract-text-webpack-plugin';
-import merge from 'webpack-merge';
-import baseConfig from './webpack.config.base';
+import webpack from 'webpack'
+import validate from 'webpack-validator'
+import ExtractTextPlugin from 'extract-text-webpack-plugin'
+import merge from 'webpack-merge'
+import baseConfig from './webpack.config.base'
 
 const config = validate(merge(baseConfig, {
   devtool: 'cheap-module-source-map',
@@ -66,6 +66,6 @@ const config = validate(merge(baseConfig, {
 
   // https://github.com/chentsulin/webpack-target-electron-renderer#how-this-module-works
   target: 'electron-renderer'
-}));
+}))
 
-export default config;
+export default config

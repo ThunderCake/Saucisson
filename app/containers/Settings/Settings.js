@@ -4,15 +4,15 @@ import styles from './Settings.css'
 class Settings extends Component {
 
   componentDidMount () {
-    document.addEventListener('keydown', this.handleKeyDown);
+    document.addEventListener('keydown', this.handleKeyDown)
   }
 
   componentWillUnmount () {
-    document.removeEventListener('keydown', this.handleKeyDown);
+    document.removeEventListener('keydown', this.handleKeyDown)
   }
 
   handleKeyDown = ({ keyCode }) => {
-    if (keyCode === 8) this.props.history.goBack();
+    if (keyCode === 8) this.props.history.goBack()
   }
 
   render () {

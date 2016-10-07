@@ -4,12 +4,12 @@
  * https://webpack.github.io/docs/hot-module-replacement-with-webpack.html
  */
 
-import webpack from 'webpack';
-import validate from 'webpack-validator';
-import merge from 'webpack-merge';
-import baseConfig from './webpack.config.base';
+import webpack from 'webpack'
+import validate from 'webpack-validator'
+import merge from 'webpack-merge'
+import baseConfig from './webpack.config.base'
 
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 3000
 
 export default validate(merge(baseConfig, {
   debug: true,
@@ -62,4 +62,4 @@ export default validate(merge(baseConfig, {
 
   // https://github.com/chentsulin/webpack-target-electron-renderer#how-this-module-works
   target: 'electron-renderer'
-}));
+}))

@@ -37,10 +37,10 @@ class Keyboardable extends Component {
         data-keyboardable-is-focused={ this.id === selected }
         data-keyboardable-id={ this.id }
         >
-          { cloneElement(children, {
-            keyboardFocused: this.id === selected ,
-            keyboardPressed: this.state.isPressed
-          }) }
+        { cloneElement(children, {
+          keyboardFocused: this.id === selected,
+          keyboardPressed: this.state.isPressed
+        }) }
       </div>
     )
   }

@@ -1,11 +1,9 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import { findDOMNode } from 'react-dom'
 import { filter, head, compose } from 'ramda'
 import { Howl } from 'howler'
 
 import { keyboardEvent } from 'reducers/keyboard'
-import { Keyboardable } from 'components/'
 
 import {
   KEYCODE_ARROW_LEFT,
@@ -13,15 +11,13 @@ import {
   KEYCODE_ARROW_RIGHT,
   KEYCODE_ARROW_DOWN,
   KEYCODE_ENTER,
-  KEYCODES_ARROWS } from 'utils/'
-
-import {
+  KEYCODES_ARROWS,
   SOUND_TICK,
-  SOUND_CLICK, } from 'utils/'
+  SOUND_CLICK } from 'utils'
 
 const nearestElement = compose(head, filter(({ dataset }) => dataset.keyboardableId))
 
-const mapStateToProps = ( { keyboard: { selected } } ) => ({ selected })
+const mapStateToProps = ({ keyboard: { selected } }) => ({ selected })
 const actions = { keyboardEvent }
 
 class App extends Component {
@@ -42,7 +38,7 @@ class App extends Component {
   }
 
   playKeyboardSound (keyCode) {
-    if (KEYCODES_ARROWS.indexOf(keyCode) !== -1 ) this.sounds.tick.play()
+    if (KEYCODES_ARROWS.indexOf(keyCode) !== -1) this.sounds.tick.play()
   }
 
   handleKeyboardFocused = ({ detail }) => {
@@ -56,8 +52,8 @@ class App extends Component {
 
   handleKeyboardNavigation = ({ keyCode }) => {
     const element = document.querySelector('[data-keyboardable-is-focused="true"]')
-    const { bottom, top, left, right, width, height } = element.getBoundingClientRect()
-    const offset = 10;
+    const { top, left, width, height } = element.getBoundingClientRect()
+    const offset = 10
 
     const position = {
       top: top + (height / 2),
@@ -69,16 +65,16 @@ class App extends Component {
         return this.handleKeyboardEnter()
       case KEYCODE_ARROW_LEFT:
         position.left = position.left - (width / 2) - offset
-        break;
+        break
       case KEYCODE_ARROW_UP:
         position.top = position.top - (height / 2) - offset
-        break;
+        break
       case KEYCODE_ARROW_RIGHT:
         position.left = position.left + (width / 2) + offset
-        break;
+        break
       case KEYCODE_ARROW_DOWN:
         position.top = position.top + (height / 2) + offset
-        break;
+        break
     }
 
     const nodeList = document.elementsFromPoint(position.left, position.top)
@@ -88,7 +84,6 @@ class App extends Component {
       this.playKeyboardSound(keyCode)
       this.props.keyboardEvent(nearest.dataset.keyboardableId)
     };
-
   }
 
   render () {
@@ -98,4 +93,4 @@ class App extends Component {
   }
 }
 
-export default connect(mapStateToProps, actions)(App);
+export default connect(mapStateToProps, actions)(App)

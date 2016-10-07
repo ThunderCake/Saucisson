@@ -2,10 +2,10 @@
  * Build config for electron 'Main Process' file
  */
 
-import webpack from 'webpack';
-import validate from 'webpack-validator';
-import merge from 'webpack-merge';
-import baseConfig from './webpack.config.base';
+import webpack from 'webpack'
+import validate from 'webpack-validator'
+import merge from 'webpack-merge'
+import baseConfig from './webpack.config.base'
 
 export default validate(merge(baseConfig, {
   devtool: 'source-map',
@@ -61,4 +61,4 @@ export default validate(merge(baseConfig, {
     'font-awesome',
     'source-map-support'
   ]
-}));
+}))

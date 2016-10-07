@@ -1,49 +1,22 @@
 {
-  "name": "electron-react-boilerplate",
-  "productName": "ElectronReact",
-  "version": "0.10.0",
-  "description": "Electron application boilerplate based on React, React Router, Webpack, React Hot Loader for rapid application development",
+  "name": "Saucisson",
+  "version": "0.0.1",
   "main": "main.js",
   "scripts": {
-    "lint": "eslint app test *.js",
-    "hot-server": "cross-env NODE_ENV=development node -r babel-register server.js",
+    "lint": "$(npm bin)/eslint app *.js --fix",
+    "start-hot-server": "cross-env NODE_ENV=development node -r babel-register server.js",
+    "start-hot-renderer": "cross-env HOT=1 NODE_ENV=development electron -r babel-register -r babel-polyfill ./main.development",
     "build-main": "cross-env NODE_ENV=production node -r babel-register ./node_modules/webpack/bin/webpack --config webpack.config.electron.js --progress --profile --colors",
     "build-renderer": "cross-env NODE_ENV=production node -r babel-register ./node_modules/webpack/bin/webpack --config webpack.config.production.js --progress --profile --colors",
     "build": "npm run build-main && npm run build-renderer",
     "start": "cross-env NODE_ENV=production electron ./",
-    "start-hot": "cross-env HOT=1 NODE_ENV=development electron -r babel-register -r babel-polyfill ./main.development",
     "package": "cross-env NODE_ENV=production node -r babel-register -r babel-polyfill package.js",
     "package-all": "npm run package -- --all",
-    "postinstall": "node node_modules/fbjs-scripts/node/check-dev-engines.js package.json",
-    "dev": "concurrently --kill-others \"npm run hot-server\" \"npm run start-hot\"",
-    "cleanup": "mop -v"
+    "postinstall": "node node_modules/fbjs-scripts/node/check-dev-engines.js package.json"
   },
   "bin": {
     "electron": "./node_modules/.bin/electron"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/chentsulin/electron-react-boilerplate.git"
-  },
-  "author": {
-    "name": "C. T. Lin",
-    "email": "chentsulin@gmail.com",
-    "url": "https://github.com/chentsulin"
-  },
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/chentsulin/electron-react-boilerplate/issues"
-  },
-  "keywords": [
-    "electron",
-    "boilerplate",
-    "react",
-    "react-router",
-    "flux",
-    "webpack",
-    "react-hot"
-  ],
-  "homepage": "https://github.com/chentsulin/electron-react-boilerplate#readme",
   "devDependencies": {
     "asar": "^0.12.2",
     "babel-core": "^6.14.0",
@@ -73,10 +46,14 @@
     "enzyme": "^2.4.1",
     "eslint": "^3.6.0",
     "eslint-config-airbnb": "^12.0.0",
+    "eslint-config-standard": "^6.2.0",
+    "eslint-config-standard-react": "^4.2.0",
     "eslint-import-resolver-webpack": "^0.6.0",
     "eslint-plugin-import": "^1.16.0",
     "eslint-plugin-jsx-a11y": "^2.2.2",
+    "eslint-plugin-promise": "^2.0.1",
     "eslint-plugin-react": "^6.3.0",
+    "eslint-plugin-standard": "^2.0.1",
     "express": "^4.14.0",
     "extract-text-webpack-plugin": "^1.0.1",
     "fbjs-scripts": "^0.7.1",
@@ -89,6 +66,7 @@
     "redux-logger": "^2.6.1",
     "sinon": "^1.17.6",
     "spectron": "^3.3.0",
+    "standard": "^8.3.0",
     "style-loader": "^0.13.1",
     "webpack": "^1.13.2",
     "webpack-dev-middleware": "^1.6.1",

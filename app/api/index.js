@@ -2,11 +2,11 @@ const _movies = () => ({
   data: [
     {
       title: 'The Lego Movie',
-      cover: 'https://fanart.tv/fanart/movies/137106/movieposter/the-lego-movie-5384f5b0528a5.jpg',
+      cover: 'https://fanart.tv/fanart/movies/137106/movieposter/the-lego-movie-5384f5b0528a5.jpg'
     },
     {
       title: 'Interstellar',
-      cover: 'https://fanart.tv/fanart/movies/157336/movieposter/interstellar-550825f7cc108.jpg',
+      cover: 'https://fanart.tv/fanart/movies/157336/movieposter/interstellar-550825f7cc108.jpg'
     },
     {
       title: 'L\'Age de Glace 5',
@@ -15,7 +15,7 @@ const _movies = () => ({
     },
     {
       title: 'Back to the Future',
-      cover: 'https://fanart.tv/fanart/movies/105/movieposter/back-to-the-future-5219e860ed5a9.jpg',
+      cover: 'https://fanart.tv/fanart/movies/105/movieposter/back-to-the-future-5219e860ed5a9.jpg'
     },
     {
       title: 'Kill Bill vol.1',

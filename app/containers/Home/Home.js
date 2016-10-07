@@ -1,26 +1,25 @@
-import React, { Component } from 'react';
-import { Link } from 'react-router';
-import { connect } from 'react-redux';
+import React, { Component } from 'react'
+import { connect } from 'react-redux'
 
-import { fetch } from 'reducers/movies';
-import { Grid, Loader } from 'components/';
+import { fetch } from 'reducers/movies'
+import { Grid, Loader } from 'components/'
 
 const mapStateToProps = ({ movies }) => {
-  return { movies };
-};
+  return { movies }
+}
 
-const actions = { fetch };
+const actions = { fetch }
 
 class Home extends Component {
   state = { items: [] }
 
-  componentWillMount() {
-    const { fetch, movies: { entries } } = this.props;
-    if (entries.length < 1) fetch();
+  componentWillMount () {
+    const { fetch, movies: { entries } } = this.props
+    if (entries.length < 1) fetch()
   }
 
-  render() {
-    const { entries = [], isFetching } = this.props.movies;
+  render () {
+    const { entries = [], isFetching } = this.props.movies
 
     return (
       <div>
@@ -31,10 +30,10 @@ class Home extends Component {
             </div>
            ) : null }
         </div>
-        <Loader isLoading={ isFetching }/>
+        <Loader isLoading={ isFetching } />
       </div>
     )
   }
 }
 
-export default connect(mapStateToProps, actions)(Home);
+export default connect(mapStateToProps, actions)(Home)
