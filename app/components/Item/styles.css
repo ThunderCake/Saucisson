@@ -1,0 +1,30 @@
+.view {
+    display: flex;
+    transition: transform .2s ease-in;
+}
+
+.entry {
+    padding: 0;
+    flex: 1;
+}
+
+.view[data-is-selected="true"] .cover {
+    border-color: white;
+}
+
+.view[data-is-pressed="true"] {
+    transform: perspective(650px) translateY(5px) rotateX(-5deg);
+}
+
+.cover {
+    width: 95%;
+    height: 95%;
+    margin: 2.5%;
+    border-radius: 3px;
+    background-position: center center;
+    background-size: cover;
+}
+
+.title {
+    background-color: transparent;
+}

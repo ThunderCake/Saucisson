@@ -1,0 +1,26 @@
+.view {
+    display: flex;
+    height: 100vh;
+    flex-direction: column;
+    color: #fff;
+}
+
+.header {
+    padding: 45px;
+}
+
+.header h1 {
+    font-size: 3em;
+    text-align: center;
+}
+
+.panes {
+    display: flex;
+    height: 100%;
+    flex-direction: row;
+}
+
+.panes > div {
+    padding: 0 45px;
+    flex: 1;
+}

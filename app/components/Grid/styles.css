@@ -1,0 +1,14 @@
+.view {
+    background-color: transparent;
+}
+
+.grid {
+    display: flex;
+    flex-wrap: wrap;
+    transform: scale(.95);
+}
+
+.title {
+    font-size: 3em;
+    color: #fff;
+}
