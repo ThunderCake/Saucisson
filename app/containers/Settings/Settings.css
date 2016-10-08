@@ -5,6 +5,25 @@
     color: #fff;
 }
 
+.view ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.view .entry {
+    padding: .55em .5em;
+    margin: .5em 0;
+    font-size: 1.1em;
+    border-radius: 2px;
+    background: rgba(255, 255, 255, .2);
+}
+
+.view .entry[data-is-selected="true"] {
+    color: #000;
+    background: rgba(255, 255, 255, .9);
+}
+
 .header {
     padding: 45px;
 }
@@ -14,6 +33,13 @@
     text-align: center;
 }
 
+.title {
+    padding: 0 .5em;
+    font-size: 1em;
+    font-weight: 200;
+    text-transform: uppercase;
+}
+
 .panes {
     display: flex;
     height: 100%;
@@ -21,6 +47,13 @@
 }
 
 .panes > div {
-    padding: 0 45px;
+    padding: 0 3em;
+}
+
+.panes > div:first-child {
+    width: 52%;
+}
+
+.panes > div:last-child {
     flex: 1;
 }

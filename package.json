@@ -76,6 +76,7 @@
   },
   "dependencies": {
     "css-modules-require-hook": "^4.0.3",
+    "electron-config": "^0.2.1",
     "electron-debug": "^1.0.1",
     "font-awesome": "^4.6.3",
     "howler": "^2.0.0",

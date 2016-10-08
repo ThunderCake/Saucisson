@@ -1,3 +1,4 @@
+export const KEYCODE_BACK = 8
 export const KEYCODE_ENTER = 13
 export const KEYCODE_ARROW_LEFT = 37
 export const KEYCODE_ARROW_UP = 38

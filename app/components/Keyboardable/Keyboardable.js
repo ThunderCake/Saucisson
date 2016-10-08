@@ -1,25 +1,27 @@
 import React, { Component, cloneElement } from 'react'
 import { connect } from 'react-redux'
 
-import { register } from 'reducers/keyboard'
+import { register, unregister } from 'reducers/keyboard'
 
-const mapStateToProps = ({ keyboard: { selected, registred } }) => ({ selected, registred })
-const actions = { register }
+const mapStateToProps = ({ keyboard: { selected, registred, keypress } }) => ({ selected, registred, keypress })
+const actions = { register, unregister }
+const defaultOffset = { up: 0, down: 0, left: 0, right: 0 }
 
 class Keyboardable extends Component {
 
-  state = {
-    isPressed: false
-  }
+  offset = { ...defaultOffset, ...this.props.offset }
 
   onEnter = () => {
-    this.setState({ isPressed: true }, () => setTimeout(() => this.setState({ isPressed: false }), 300))
     this.props.onEnter()
   }
 
   componentWillMount () {
     this.id = this.props.registred
     this.props.register()
+  }
+
+  componentWillUnmount () {
+    this.props.unregister()
   }
 
   componentWillReceiveProps ({ selected }) {
@@ -33,15 +35,15 @@ class Keyboardable extends Component {
     const { children, selected } = this.props
 
     return (
-      <div
+      <span
         data-keyboardable-is-focused={ this.id === selected }
         data-keyboardable-id={ this.id }
         >
         { cloneElement(children, {
           keyboardFocused: this.id === selected,
-          keyboardPressed: this.state.isPressed
+          keyboardPressed: this.id === selected && this.props.keypress
         }) }
-      </div>
+      </span>
     )
   }
 
