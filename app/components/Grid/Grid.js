@@ -44,7 +44,7 @@ class Grid extends Component {
       <div ref='view' className={ styles.view }>
         <div className={ styles.grid }>
           { items.map((item, i) =>
-            <Keyboardable onEnter={ () => this.handleEnter(item) } >
+            <Keyboardable onFocus={ () => this.props.onFocus(item) } onEnter={ () => this.handleEnter(item) } >
               <Item style={ size } key={ i } { ...item } />
             </Keyboardable>
           ) }

@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 
-import { fetch } from 'reducers/movies'
+import { fetch, set } from 'reducers/movies'
 import { Grid, Loader, Keyboardable } from 'components/'
 import { push } from 'react-router-redux'
 
@@ -11,7 +11,7 @@ const SettingButton = ({ keyboardFocused, keyboardPressed, children }) =>
   </div>
 
 const mapStateToProps = ({ movies }) => ({ movies })
-const actions = { fetch, push }
+const actions = { fetch, push, set }
 
 class Home extends Component {
   state = { items: [] }
@@ -22,7 +22,7 @@ class Home extends Component {
   }
 
   render () {
-    const { entries = [], isFetching } = this.props.movies
+    const { entries = [], isFetching, selected: { title } } = this.props.movies
 
     return (
       <div>
@@ -32,11 +32,14 @@ class Home extends Component {
         <div>
           { !isFetching ? (
             <div>
-              <Grid items={ entries } />
+              <Grid items={ entries } onFocus={ this.props.set } />
             </div>
            ) : null }
         </div>
         <Loader isLoading={ isFetching } />
+        <footer>
+          <h1 style={ { padding: '45px 25px', color: '#fff', fontWeight: 'normal' } } >{ title }</h1>
+        </footer>
       </div>
     )
   }

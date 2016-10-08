@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import { pluck, findIndex, propEq } from 'ramda'
+import { findIndex, propEq } from 'ramda'
 
 import styles from './Settings.css'
 
