@@ -1,0 +1,14 @@
+.view {
+    justify-content: space-between;
+    display: flex;
+    padding: .55em .5em;
+    margin: .5em 0;
+    font-size: 1.1em;
+    border-radius: 2px;
+    background: rgba(255, 255, 255, .2);
+}
+
+.view[data-is-selected="true"] {
+    color: #000;
+    background: rgba(255, 255, 255, .9);
+}

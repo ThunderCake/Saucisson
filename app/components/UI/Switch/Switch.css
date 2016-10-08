@@ -1,0 +1,22 @@
+.view {
+    width: 40px;
+    transition: background-color .2s ease;
+    border-radius: 1em;
+    background: rgba(216, 216, 216, .5);
+}
+
+.view[data-value="true"] {
+    background-color: rgba(100, 220, 0, .5);
+}
+
+.view > div {
+    width: calc(100% / 2);
+    height: 100%;
+    transition: transform .2s ease;
+    border-radius: 50%;
+    background: #fff;
+}
+
+.view[data-value="true"] > div {
+    transform: translateX(100%);
+}

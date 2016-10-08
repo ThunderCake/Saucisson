@@ -14,20 +14,6 @@
     ]
   },
   {
-    "name": "Cool Brown",
-    "colors": [
-      "#603813",
-      "#b29f94"
-    ]
-  },
-  {
-    "name": "Harmonic Energy",
-    "colors": [
-      "#16A085",
-      "#F4D03F"
-    ]
-  },
-  {
     "name": "Playing with Reds",
     "colors": [
       "#D31027",
@@ -60,34 +46,6 @@
     "colors": [
       "#348F50",
       "#56B4D3"
-    ]
-  },
-  {
-    "name": "Lemon Twist",
-    "colors": [
-      "#3CA55C",
-      "#B5AC49"
-    ]
-  },
-  {
-    "name": "Horizon",
-    "colors": [
-      "#003973",
-      "#E5E5BE"
-    ]
-  },
-  {
-    "name": "Rose Water",
-    "colors": [
-      "#E55D87",
-      "#5FC3E4"
-    ]
-  },
-  {
-    "name": "Frozen",
-    "colors": [
-      "#403B4A",
-      "#E7E9BB"
     ]
   },
   {
@@ -266,13 +224,6 @@
     ]
   },
   {
-    "name": "Dracula",
-    "colors": [
-      "#DC2424",
-      "#4A569D"
-    ]
-  },
-  {
     "name": "Peach",
     "colors": [
       "#ED4264",
@@ -329,20 +280,6 @@
     ]
   },
   {
-    "name": "Army",
-    "colors": [
-      "#414d0b",
-      "#727a17"
-    ]
-  },
-  {
-    "name": "Miaka",
-    "colors": [
-      "#FC354C",
-      "#0ABFBC"
-    ]
-  },
-  {
     "name": "Pinot Noir",
     "colors": [
       "#4b6cb7",
@@ -371,24 +308,10 @@
     ]
   },
   {
-    "name": "Vasily",
-    "colors": [
-      "#e9d362",
-      "#333333"
-    ]
-  },
-  {
     "name": "A Lost Memory",
     "colors": [
       "#DE6262",
       "#FFB88C"
-    ]
-  },
-  {
-    "name": "Petrichor",
-    "colors": [
-      "#666600",
-      "#999966"
     ]
   },
   {
@@ -410,13 +333,6 @@
     "colors": [
       "#c21500",
       "#ffc500"
-    ]
-  },
-  {
-    "name": "Misty Meadow",
-    "colors": [
-      "#215f00",
-      "#e4e4d9"
     ]
   },
   {
@@ -546,31 +462,10 @@
     ]
   },
   {
-    "name": "Red Mist",
-    "colors": [
-      "#000000",
-      "#e74c3c"
-    ]
-  },
-  {
     "name": "Teal Love",
     "colors": [
       "#AAFFA9",
       "#11FFBD"
-    ]
-  },
-  {
-    "name": "Neon Life",
-    "colors": [
-      "#B3FFAB",
-      "#12FFF7"
-    ]
-  },
-  {
-    "name": "Man of Steel",
-    "colors": [
-      "#780206",
-      "#061161"
     ]
   },
   {
@@ -609,13 +504,6 @@
     ]
   },
   {
-    "name": "Behongo",
-    "colors": [
-      "#52c234",
-      "#061700"
-    ]
-  },
-  {
     "name": "ServQuick",
     "colors": [
       "#485563",
@@ -630,13 +518,6 @@
     ]
   },
   {
-    "name": "Martini",
-    "colors": [
-      "#FDFC47",
-      "#24FE41"
-    ]
-  },
-  {
     "name": "Metallic Toad",
     "colors": [
       "#abbaab",
@@ -648,41 +529,6 @@
     "colors": [
       "#73C8A9",
       "#373B44"
-    ]
-  },
-  {
-    "name": "Crazy Orange I",
-    "colors": [
-      "#D38312",
-      "#A83279"
-    ]
-  },
-  {
-    "name": "Hersheys",
-    "colors": [
-      "#1e130c",
-      "#9a8478"
-    ]
-  },
-  {
-    "name": "Talking To Mice Elf",
-    "colors": [
-      "#948E99",
-      "#2E1437"
-    ]
-  },
-  {
-    "name": "Purple Bliss",
-    "colors": [
-      "#360033",
-      "#0b8793"
-    ]
-  },
-  {
-    "name": "Predawn",
-    "colors": [
-      "#FFA17F",
-      "#00223E"
     ]
   },
   {
@@ -721,13 +567,6 @@
     ]
   },
   {
-    "name": "Vine",
-    "colors": [
-      "#00bf8f",
-      "#001510"
-    ]
-  },
-  {
     "name": "Turquoise flow",
     "colors": [
       "#136a8a",
@@ -763,20 +602,6 @@
     ]
   },
   {
-    "name": "Green to dark",
-    "colors": [
-      "#6A9113",
-      "#141517"
-    ]
-  },
-  {
-    "name": "Ukraine",
-    "colors": [
-      "#004FF9",
-      "#FFF94C"
-    ]
-  },
-  {
     "name": "Curiosity blue",
     "colors": [
       "#525252",
@@ -798,31 +623,10 @@
     ]
   },
   {
-    "name": "Lizard",
-    "colors": [
-      "#304352",
-      "#d7d2cc"
-    ]
-  },
-  {
-    "name": "Sage Persuasion",
-    "colors": [
-      "#CCCCB2",
-      "#757519"
-    ]
-  },
-  {
     "name": "Between Night and Day",
     "colors": [
       "#2c3e50",
       "#3498db"
-    ]
-  },
-  {
-    "name": "Timber",
-    "colors": [
-      "#fc00ff",
-      "#00dbde"
     ]
   },
   {
@@ -938,13 +742,6 @@
     ]
   },
   {
-    "name": "Pizelex",
-    "colors": [
-      "#114357",
-      "#F29492"
-    ]
-  },
-  {
     "name": "Joomla",
     "colors": [
       "#1e3c72",
@@ -952,45 +749,10 @@
     ]
   },
   {
-    "name": "Christmas",
-    "colors": [
-      "#2F7336",
-      "#AA3A38"
-    ]
-  },
-  {
-    "name": "Minnesota Vikings",
-    "colors": [
-      "#5614B0",
-      "#DBD65C"
-    ]
-  },
-  {
-    "name": "Miami Dolphins",
-    "colors": [
-      "#4DA0B0",
-      "#D39D38"
-    ]
-  },
-  {
-    "name": "Forest",
-    "colors": [
-      "#5A3F37",
-      "#2C7744"
-    ]
-  },
-  {
     "name": "Nighthawk",
     "colors": [
       "#2980b9",
       "#2c3e50"
-    ]
-  },
-  {
-    "name": "Superman",
-    "colors": [
-      "#0099F7",
-      "#F11712"
     ]
   },
   {
@@ -1036,45 +798,10 @@
     ]
   },
   {
-    "name": "Ali",
-    "colors": [
-      "#ff4b1f",
-      "#1fddff"
-    ]
-  },
-  {
-    "name": "Alihossein",
-    "colors": [
-      "#f7ff00",
-      "#db36a4"
-    ]
-  },
-  {
-    "name": "Shahabi",
-    "colors": [
-      "#a80077",
-      "#66ff00"
-    ]
-  },
-  {
-    "name": "Red Ocean",
-    "colors": [
-      "#1D4350",
-      "#A43931"
-    ]
-  },
-  {
     "name": "Tranquil",
     "colors": [
       "#EECDA3",
       "#EF629F"
-    ]
-  },
-  {
-    "name": "Transfile",
-    "colors": [
-      "#16BFFD",
-      "#CB3066"
     ]
   },
   {
@@ -1092,13 +819,6 @@
     ]
   },
   {
-    "name": "Politics",
-    "colors": [
-      "#2196f3",
-      "#f44336"
-    ]
-  },
-  {
     "name": "Bright Vault",
     "colors": [
       "#00d2ff",
@@ -1113,13 +833,6 @@
     ]
   },
   {
-    "name": "Sunset",
-    "colors": [
-      "#0B486B",
-      "#F56217"
-    ]
-  },
-  {
     "name": "Grapefruit Sunset",
     "colors": [
       "#e96443",
@@ -1131,13 +844,6 @@
     "colors": [
       "#2C3E50",
       "#4CA1AF"
-    ]
-  },
-  {
-    "name": "Dusk",
-    "colors": [
-      "#2C3E50",
-      "#FD746C"
     ]
   },
   {
@@ -1225,13 +931,6 @@
     ]
   },
   {
-    "name": "Dania",
-    "colors": [
-      "#BE93C5",
-      "#7BC6CC"
-    ]
-  },
-  {
     "name": "Limeade",
     "colors": [
       "#A1FFCE",
@@ -1243,27 +942,6 @@
     "colors": [
       "#4ECDC4",
       "#556270"
-    ]
-  },
-  {
-    "name": "Love Couple",
-    "colors": [
-      "#3a6186",
-      "#89253e"
-    ]
-  },
-  {
-    "name": "Azure Pop",
-    "colors": [
-      "#ef32d9",
-      "#89fffd"
-    ]
-  },
-  {
-    "name": "Nepal",
-    "colors": [
-      "#de6161",
-      "#2657eb"
     ]
   },
   {

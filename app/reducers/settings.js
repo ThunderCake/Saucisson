@@ -9,7 +9,20 @@ export const set = (key, value) => (dispatch, getState) => {
   dispatch({ type: CHANGE, payload: config.store })
 }
 
-const initialState = config.store
+export const toggle = key => (dispatch, getState) =>
+  dispatch(set(key, !config.get(key)))
+
+const defaultConfig = {
+  saveOnExit: true,
+  theme: 'Noon to Dusk'
+}
+
+const initialState = {
+  ...defaultConfig,
+  ...config.store
+}
+
+console.log(initialState)
 
 export default (state = initialState, { type, payload }) => {
   switch (type) {

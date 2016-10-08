@@ -11,19 +11,6 @@
     list-style: none;
 }
 
-.view .entry {
-    padding: .55em .5em;
-    margin: .5em 0;
-    font-size: 1.1em;
-    border-radius: 2px;
-    background: rgba(255, 255, 255, .2);
-}
-
-.view .entry[data-is-selected="true"] {
-    color: #000;
-    background: rgba(255, 255, 255, .9);
-}
-
 .header {
     padding: 45px;
 }
@@ -40,6 +27,17 @@
     text-transform: uppercase;
 }
 
+.icon {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    width: 28em;
+    height: 28em;
+    padding: 30px;
+    border-radius: 30px;
+    background-color: rgba(255, 255, 255, .7);
+}
+
 .panes {
     display: flex;
     height: 100%;
@@ -51,9 +49,17 @@
 }
 
 .panes > div:first-child {
+    align-items: center;
+    justify-content: center;
+    display: flex;
     width: 52%;
 }
 
 .panes > div:last-child {
     flex: 1;
+}
+
+.icon::after {
+    font-size: 4em;
+    content: "SaucissonTV";
 }

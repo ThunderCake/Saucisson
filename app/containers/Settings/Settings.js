@@ -1,42 +1,28 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import { Motion, spring } from 'react-motion'
-import { pluck } from 'ramda'
+import { pluck, findIndex, propEq } from 'ramda'
 
 import styles from './Settings.css'
 
 import themes from 'utils/gradients'
-import { Keyboardable } from 'components/'
-import { set } from 'reducers/settings'
-
-const springConfig = { stiffness: 300, damping: 18 }
-
-const Entry = ({ keyboardFocused, keyboardPressed, children }) =>
-  <Motion style={ {
-    shadow: keyboardFocused ? spring(16, springConfig) : spring(0, springConfig)
-  } } >
-    { ({ shadow }) =>
-      <div
-        className={ styles.entry }
-        style={ {boxShadow: `rgba(0, 0, 0, 0.2) 0px ${shadow}px ${2 * shadow}px 0px`} }
-        data-is-selected={ keyboardFocused }
-        data-is-pressed={ keyboardPressed } >
-        { children }
-      </div> }
-  </Motion>
+import { Keyboardable, SettingEntry as Entry } from 'components/'
+import { set, toggle } from 'reducers/settings'
 
 const mapStateToProps = ({ settings }) => ({ settings })
-const actions = { set }
+const actions = { set, toggle }
 
 class Settings extends Component {
 
   handleThemeChange = () => {
-    const choices = pluck(['name'], themes)
-    const selection = choices[Math.floor(Math.random() * choices.length)]
-    this.props.set('theme', selection)
+    const { theme } = this.props.settings
+    const i = findIndex(propEq('name', theme), themes)
+    const index = i + 1 > themes.length ? 0 : i + 1
+    this.props.set('theme', themes[index].name)
   }
 
   render () {
+    const { settings, toggle } = this.props
+
     return (
       <div className={ styles.view }>
         <div className={ styles.header } >
@@ -44,14 +30,14 @@ class Settings extends Component {
         </div>
         <div className={ styles.panes } >
           <div>
-            Pane 1
+            {/*<div className={ styles.icon } />*/}
           </div>
           <div>
             <h2 className={ styles.title }>Player</h2>
             <ul>
               <li>
-                <Keyboardable>
-                  <Entry>Save position on exit</Entry>
+                <Keyboardable onEnter={ () => toggle('saveOnExit') } >
+                  <Entry value={ settings.saveOnExit } >Save position on exit</Entry>
                 </Keyboardable>
               </li>
               <li>
@@ -69,7 +55,7 @@ class Settings extends Component {
             <ul>
               <li>
                 <Keyboardable onEnter={ this.handleThemeChange } offset={ { up: 40 } } >
-                  <Entry>Theme</Entry>
+                  <Entry value={ settings.theme } >Theme</Entry>
                 </Keyboardable>
               </li>
             </ul>

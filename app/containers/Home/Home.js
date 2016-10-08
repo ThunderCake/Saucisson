@@ -6,14 +6,11 @@ import { Grid, Loader, Keyboardable } from 'components/'
 import { push } from 'react-router-redux'
 
 const SettingButton = ({ keyboardFocused, keyboardPressed, children }) =>
-  <div style={ { width: '200px', padding: 40, backgroundColor: keyboardFocused ? 'red' : 'transparent' } }>
-    <img style={ { width: 32, height: 32 } } src='./assets/images/settings.png' />
+  <div style={ { width: '200px', padding: 40 } }>
+    <img style={ { width: 32, height: 32, filter: keyboardFocused ? 'invert(100%)' : 'initial' } } src='./assets/images/settings.png' />
   </div>
 
-const mapStateToProps = ({ movies }) => {
-  return { movies }
-}
-
+const mapStateToProps = ({ movies }) => ({ movies })
 const actions = { fetch, push }
 
 class Home extends Component {
