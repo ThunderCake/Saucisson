@@ -1,4 +1,5 @@
 .view {
+    align-items: center;
     justify-content: space-between;
     display: flex;
     padding: .55em .5em;

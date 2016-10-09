@@ -9,7 +9,7 @@ body {
     margin: 0;
     overflow-y: hidden;
     font-family: "Roboto", sans-serif;
-    font-size: 100%;
+    font-size: 1em;
 }
 
 h1,
@@ -28,4 +28,19 @@ h5 {
 
 #root > div {
     height: 100%;
+}
+
+
+/* 1400 & 1920 */
+@media only screen and (min-width: 90.063em) and (max-width: 120em) {
+    body {
+        font-size: 1.5em;
+    }
+}
+
+/* 2K, 4K and + */
+@media only screen and (min-width: 120.063em) {
+    body {
+        font-size: 2em;
+    }
 }

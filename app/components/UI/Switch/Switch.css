@@ -1,5 +1,6 @@
 .view {
-    width: 40px;
+    width: 2em;
+    height: 1em;
     transition: background-color .2s ease;
     border-radius: 1em;
     background: rgba(216, 216, 216, .5);
@@ -10,13 +11,13 @@
 }
 
 .view > div {
-    width: calc(100% / 2);
-    height: 100%;
+    width: 1em;
+    height: 1em;
     transition: transform .2s ease;
     border-radius: 50%;
     background: #fff;
 }
 
 .view[data-value="true"] > div {
-    transform: translateX(100%);
+    transform: translateX(1em);
 }

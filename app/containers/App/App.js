@@ -24,7 +24,7 @@ const mapStateToProps = ({ settings, keyboard: { selected } }) => ({ selected, s
 const actions = { keyboardSelect, goBack, keydown, keyup }
 
 const Pointer = ({ style }) => <div style={ { ...style, padding: 2, zIndex: 10000, borderRadius: '50%', position: 'absolute', background: 'red', width: 2, height: 2 } } />
-const DEBUG = false
+const DEBUG = true
 
 class App extends Component {
 
@@ -79,7 +79,9 @@ class App extends Component {
     }
 
     const { top, left, width, height } = element.children[0].getBoundingClientRect()
-    const offset = 20
+
+    const hidpi = parseFloat(getComputedStyle(document.body).fontSize) === 32
+    const offset = hidpi ? 40 : 20
 
     const position = {
       top: top + (height / 2),
