@@ -13,7 +13,7 @@ export const toggle = key => (dispatch, getState) =>
   dispatch(set(key, !config.get(key)))
 
 const defaultConfig = {
-  saveOnExit: true,
+  savePositionOnQuit: true,
   theme: 'Noon to Dusk'
 }
 

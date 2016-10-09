@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
-import { Item } from '../'
+import { ipcRenderer as IPC } from 'electron'
 
+import { Item } from '../'
 import { Keyboardable } from 'components/'
 import styles from './styles.css'
 
@@ -33,7 +34,7 @@ class Grid extends Component {
 
   handleEnter = item => {
     console.log(item)
-    // IPC.send('play', item)
+    IPC.send('play', item)
   }
 
   render () {

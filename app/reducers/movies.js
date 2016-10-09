@@ -20,7 +20,8 @@ export const set = movie => (dispatch, getState) => {
 
 const initialState = {
   entries: [],
-  isFetching: true
+  isFetching: true,
+  selected: {}
 }
 
 export default (state = initialState, { type, payload }) => {

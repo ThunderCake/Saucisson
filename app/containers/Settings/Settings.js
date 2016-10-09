@@ -36,8 +36,8 @@ class Settings extends Component {
             <h2 className={ styles.title }>Player</h2>
             <ul>
               <li>
-                <Keyboardable onEnter={ () => toggle('saveOnExit') } >
-                  <Entry value={ settings.saveOnExit } >Save position on exit</Entry>
+                <Keyboardable onEnter={ () => toggle('savePositionOnQuit') } >
+                  <Entry value={ settings.savePositionOnQuit } >Save position on exit</Entry>
                 </Keyboardable>
               </li>
               <li>
