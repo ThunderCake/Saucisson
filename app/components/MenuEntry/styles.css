@@ -1,0 +1,44 @@
+.view {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    height: 17vh;
+    margin: 1.2vh;
+    font-size: 3vh;
+    transition: transform .3s ease, color .2s ease, font-size .2s ease-in-out;
+    border-radius: .4vh;
+}
+
+.view[data-focused="true"] {
+    font-size: 5vh;
+    transform: scale(1.2);
+}
+
+.view[data-pressed="true"] {
+    transform: scale(1.2) translateY(.1rem) ;
+}
+
+.view[data-index="0"] {
+    color: #fff;
+    background: linear-gradient(-45deg, #1d976c , #93f9b9);
+}
+
+.view[data-index="1"] {
+    color: #fff;
+    background: linear-gradient(-45deg, #e159b8 , #6e2d9a);
+}
+
+.view[data-index="2"] {
+    color: #fff;
+    background: linear-gradient(-45deg, #00c6ff , #0072ff);
+}
+
+.view[data-index="3"] {
+    color: #fff;
+    background: linear-gradient(-45deg, #ffb75e , #ed8f03);
+}
+
+.view[data-index="4"] {
+    color: #333;
+    background: linear-gradient(-45deg, #ece9e6 , #fff);
+}
