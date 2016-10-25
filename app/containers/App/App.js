@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { filter, head, compose, find, propEq } from 'ramda'
-import { Howl } from 'howler'
 import { goBack } from 'react-router-redux'
 
 import themes from 'utils/gradients'
@@ -15,8 +14,7 @@ import {
   KEYCODE_ENTER,
   KEYCODE_BACK,
   KEYCODES_ARROWS,
-  SOUND_TICK,
-  SOUND_CLICK } from 'utils/'
+  Sounds } from 'utils/'
 
 const nearestElement = compose(head, filter(({ dataset }) => dataset.keyboardableId))
 
@@ -32,9 +30,8 @@ class App extends Component {
     debugPointerStyle: { top: 0, left: 0 }
   }
 
-  sounds = {
-    tick: new Howl({ src: SOUND_TICK }),
-    click: new Howl({ src: SOUND_CLICK })
+  componentDidUpdate () {
+    this.sounds = Sounds(this.props.settings.sounds)
   }
 
   componentDidMount () {
@@ -50,7 +47,7 @@ class App extends Component {
   }
 
   playKeyboardSound (keyCode) {
-    if (KEYCODES_ARROWS.indexOf(keyCode) !== -1) this.sounds.tick.play()
+    if (KEYCODES_ARROWS.indexOf(keyCode) !== -1) this.sounds('tick')
   }
 
   handleKeyboardFocused = ({ detail }) => {
@@ -58,7 +55,7 @@ class App extends Component {
   }
 
   handleKeyboardEnter = element => {
-    this.sounds.click.play()
+    this.sounds('click')
     this.state.focusedComponent.onEnter()
   }
 

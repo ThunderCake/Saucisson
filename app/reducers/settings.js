@@ -14,6 +14,7 @@ export const toggle = key => (dispatch, getState) =>
 
 const defaultConfig = {
   savePositionOnQuit: true,
+  sounds: true,
   theme: 'Noon to Dusk'
 }
 
@@ -21,8 +22,6 @@ const initialState = {
   ...defaultConfig,
   ...config.store
 }
-
-console.log(initialState)
 
 export default (state = initialState, { type, payload }) => {
   switch (type) {

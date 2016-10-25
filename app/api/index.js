@@ -1,6 +1,6 @@
 import CPBAPI from 'cpasbien-api'
 import parser from 'torrent-name-parser'
-import { map, uniqWith, filter, take, groupWith, uniq, sort, toLower, compose, flatten } from 'ramda'
+import { map, filter, take, groupWith, sort, toLower, compose, flatten } from 'ramda'
 import { compareStrings } from 'resemblance'
 
 const QUALITIES = ['webrip', 'dvdrip', 'bdrip', 'bluray']
@@ -15,18 +15,12 @@ const sortQuality = sort(({ quality: a }, { quality: b }) =>
 
 const filterQuality = compose(flatten, map(take(1)))
 
-api.Latest()
+export const movies = () => api.Latest()
   .then(({ items }) => items)
   .then(map(humanize))
   .then(groupWith(dedupe))
   .then(map(sortQuality))
   .then(filterQuality)
-  .then(console.log)
-
-export const movies = () => api.Latest()
-  .then(({ items }) => items)
-  .then(map(humanize))
-  .then(uniqWith(dedupe))
   .then(filter(({ title }) => title !== 'Broken Vows'))
   .then(take(14))
   .then((data) => ({ data }))

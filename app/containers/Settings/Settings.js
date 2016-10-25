@@ -58,6 +58,13 @@ class Settings extends Component {
                   <Entry value={ settings.theme } >Theme</Entry>
                 </Keyboardable>
               </li>
+              <li>
+                <Keyboardable>
+                  <Keyboardable onEnter={ () => toggle('sounds') } >
+                    <Entry value={ settings.sounds } >Enable sounds</Entry>
+                  </Keyboardable>
+                </Keyboardable>
+              </li>
             </ul>
           </div>
         </div>
