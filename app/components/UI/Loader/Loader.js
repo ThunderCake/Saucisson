@@ -1,12 +1,12 @@
 import React from 'react'
 import styles from './styles.css'
-import transition from './transitions.css'
+import transitions from './transitions.css'
 import CSSTransition from 'react-addons-css-transition-group'
 
 const Loader = ({ isLoading }) =>
   <div className={ styles.view }>
     <CSSTransition
-      transitionName={ transition }
+      transitionName={ transitions }
       transitionEnterTimeout={ 500 }
       transitionLeaveTimeout={ 500 }>
       { isLoading ? (
