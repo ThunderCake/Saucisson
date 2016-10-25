@@ -12,30 +12,19 @@
 }
 
 .header {
-    padding: 45px;
+    padding: 2vh;
 }
 
 .header h1 {
-    font-size: 3em;
+    font-size: 5vh;
     text-align: center;
 }
 
 .title {
-    padding: 0 .5em;
-    font-size: 1em;
+    padding: 0 1vh;
+    font-size: 2vh;
     font-weight: 200;
     text-transform: uppercase;
-}
-
-.icon {
-    align-items: center;
-    justify-content: center;
-    display: flex;
-    width: 28em;
-    height: 28em;
-    padding: 30px;
-    border-radius: 30px;
-    background-color: rgba(255, 255, 255, .7);
 }
 
 .panes {
@@ -45,21 +34,16 @@
 }
 
 .panes > div {
-    padding: 0 3em;
+    padding: 0 3vw;
 }
 
 .panes > div:first-child {
     align-items: center;
     justify-content: center;
     display: flex;
-    width: 52%;
+    width: 52vw;
 }
 
 .panes > div:last-child {
     flex: 1;
-}
-
-.icon::after {
-    font-size: 4em;
-    content: "SaucissonTV";
 }

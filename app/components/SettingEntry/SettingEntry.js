@@ -1,26 +1,24 @@
 import React from 'react'
 import { Motion, spring } from 'react-motion'
+import { type } from 'ramda'
 
 import { Switch } from 'components/'
 
-import styles from './SettingEntry.css'
+import styles from './styles.css'
 const springConfig = { stiffness: 300, damping: 18 }
-
-const toType = obj =>
-  ({}).toString.call(obj).match(/\s([a-zA-Z]+)/)[1].toLowerCase()
 
 const fromValue = type => {
   switch (type) {
-    case 'boolean':
+    case 'Boolean':
       return Switch
-    case 'string':
+    case 'String':
     default:
       return ({ value }) => <span>{ value }</span>
   }
 }
 
 const SettingEntry = ({ value = '', children, keyboardFocused, keyboardPressed }) => {
-  const Value = fromValue(toType(value))
+  const Value = fromValue(type(value))
 
   return (
     <Motion style={ {
