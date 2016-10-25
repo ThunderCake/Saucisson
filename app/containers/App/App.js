@@ -81,7 +81,7 @@ class App extends Component {
     const { top, left, width, height } = element.children[0].getBoundingClientRect()
 
     const hidpi = parseFloat(getComputedStyle(document.body).fontSize) === 32
-    const offset = hidpi ? 40 : 20
+    const offset = hidpi ? 60 : 20
 
     const position = {
       top: top + (height / 2),

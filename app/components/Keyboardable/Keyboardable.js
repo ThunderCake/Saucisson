@@ -25,7 +25,7 @@ class Keyboardable extends Component {
   }
 
   componentWillReceiveProps ({ selected }) {
-    const { id, onFocus = () => {} } = this.props
+    const { onFocus = () => {} } = this.props
     if (selected === this.id) {
       onFocus()
       const event = new CustomEvent('keyboardableFocused', { detail: this })
