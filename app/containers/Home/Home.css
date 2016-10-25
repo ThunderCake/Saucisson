@@ -1,0 +1,17 @@
+.menu {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: 3vh;
+    background-color: rgba(255, 255, 255, .1);
+}
+
+.menu > div {
+    justify-content: space-between;
+    display: flex;
+}
+
+.menu > div > span {
+    flex: 1;
+}
