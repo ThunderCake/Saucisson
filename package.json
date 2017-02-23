@@ -9,10 +9,7 @@
     "build-main": "cross-env NODE_ENV=production node -r babel-register ./node_modules/webpack/bin/webpack --config webpack.config.electron.js --progress --profile --colors",
     "build-renderer": "cross-env NODE_ENV=production node -r babel-register ./node_modules/webpack/bin/webpack --config webpack.config.production.js --progress --profile --colors",
     "build": "npm run build-main && npm run build-renderer",
-    "start": "cross-env NODE_ENV=production electron ./",
-    "package": "cross-env NODE_ENV=production node -r babel-register -r babel-polyfill package.js",
-    "package-all": "npm run package -- --all",
-    "postinstall": "node node_modules/fbjs-scripts/node/check-dev-engines.js package.json"
+    "start": "cross-env NODE_ENV=production electron ./"
   },
   "bin": {
     "electron": "./node_modules/.bin/electron"
@@ -76,7 +73,6 @@
     "webpack-validator": "^2.2.7"
   },
   "dependencies": {
-    "cpasbien-api": "^1.1.1",
     "css-modules-require-hook": "^4.0.3",
     "electron-config": "^0.2.1",
     "electron-debug": "^1.0.1",
@@ -95,9 +91,5 @@
     "redux-thunk": "^2.1.0",
     "resemblance": "^1.0.0",
     "source-map-support": "^0.4.2"
-  },
-  "devEngines": {
-    "node": "6.x",
-    "npm": "2.x || 3.x"
   }
 }
